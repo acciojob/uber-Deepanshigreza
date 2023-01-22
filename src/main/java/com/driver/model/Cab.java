@@ -1,7 +1,7 @@
 package  com.driver.model;
 
 import javax.persistence.*;
-import java.sql.Driver;
+
 
 @Entity
 public class Cab {
