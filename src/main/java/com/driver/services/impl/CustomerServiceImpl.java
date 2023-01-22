@@ -30,11 +30,15 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public void register(Customer customer) {
 		//Save the customer in database
+		customerRepository2.save(customer);
 	}
 
 	@Override
 	public void deleteCustomer(Integer customerId) {
+		Customer customer=customerRepository2.findById(customerId).get();
+		customerRepository2.delete(customer);
 		// Delete customer without using deleteById function
+
 
 	}
 
@@ -48,6 +52,7 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public void cancelTrip(Integer tripId){
 		//Cancel the trip having given trip Id and update TripBooking attributes accordingly
+
 
 	}
 
