@@ -8,7 +8,7 @@ import com.driver.model.Driver;
 @Entity
 public class Admin {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer adminId;
     private String username;
     private String password;

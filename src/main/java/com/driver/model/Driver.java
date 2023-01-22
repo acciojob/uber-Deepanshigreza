@@ -9,14 +9,14 @@ import java.util.List;
 @Entity
 public class Driver {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer driverId;
 
     private String mobile;
     private String password;
 
-    @OneToOne
-    @JoinColumn
+    @OneToOne(mappedBy ="driver" ,cascade=CascadeType.ALL)
+
     private Cab cab;
 
     @OneToMany(mappedBy ="driver" , cascade=CascadeType.ALL)

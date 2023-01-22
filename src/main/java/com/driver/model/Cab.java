@@ -7,7 +7,7 @@ import java.sql.Driver;
 public class Cab {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private int perKmRate;
     private boolean available;
@@ -61,5 +61,10 @@ public class Cab {
     }
 
     public Cab() {
+    }
+
+    public boolean getAvailable() {
+
+return available;
     }
 }
