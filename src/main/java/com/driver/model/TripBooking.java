@@ -40,11 +40,11 @@ private Driver driver;
         this.bill = bill;
     }
 
-    public TripBooking(String fromLocation, String toLocation, int distanceInKm, TripStatus status) {
+    public TripBooking(String fromLocation, String toLocation, int distanceInKm) {
         this.fromLocation = fromLocation;
         this.toLocation = toLocation;
         this.distanceInKm = distanceInKm;
-        this.status = status;
+
     }
 
     public int getTripBookingId() {
